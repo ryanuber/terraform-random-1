@@ -1,5 +1,5 @@
 data "external" "slow-data-source-external" {
-  program = ["curl", "-m", "5", "-v", "https://jsonip.com"]
+  program = ["curl", "-m", "1", "-v", "https://app.terraform.io/.well-known/terraform.json"]
 }
 resource "random_id" "random" {
   keepers = {
