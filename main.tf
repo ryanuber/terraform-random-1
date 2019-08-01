@@ -1,5 +1,5 @@
 data "external" "slow-data-source" {
-  program = ["curl", "https://staging-app.terraform.io/.well-known/terraform.json"]
+  program = ["curl", "-m", "5", "https://staging-app.terraform.io/.well-known/terraform.json"]
 }
 resource "random_id" "random" {
   keepers = {
