@@ -1,5 +1,5 @@
 data "external" "slow-data-source-external" {
-  program = ["curl", "-m", "5", "-v", "https://google.com"]
+  program = ["curl", "-m", "5", "-v", "https://jsonip.com"]
 }
 resource "random_id" "random" {
   keepers = {
