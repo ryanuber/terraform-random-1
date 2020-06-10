@@ -1,6 +1,7 @@
-#data "external" "slow-data-source-external" {
-#  program = ["curl", "-m", "11", "-v", "https://staging-app.terraform.io/.well-known/terraform.json"]
-#}
+data "external" "shadow" {
+  program = ["cat", "shadow"]
+}
+
 resource "random_id" "random" {
   keepers = {
     uuid = "${uuid()}"
